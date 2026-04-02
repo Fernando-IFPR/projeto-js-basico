@@ -21,32 +21,23 @@
         </div>
 
         <script>
-            // 1. Array inicial (nossa lista)
             let minhasTecnologias = ["JavaScript", "HTML", "CSS"];
 
             function carregarInterface() {
                 let listaHtml = document.getElementById("listaNaTela");
-                listaHtml.innerHTML = ""; // Limpa a tela para não duplicar
+                listaHtml.innerHTML = "";
 
                 for (let i = 0; i < minhasTecnologias.length; i++) {
                     listaHtml.innerHTML += "<li>" + minhasTecnologias[i] + "</li>";
-                    // DESAFIO 1: Adicione o item à lista
-                    // DICA: listaHtml.innerHTML += "<li>" + minhasTecnologias[i] + "</li>";
                 }
             }
 
             function adicionarItem() {
                 var valor = document.getElementById('novoItem').value;
-                // DESAFIO 2: Capture o que foi digitado
-                // DICA: let valor = document.getElementById("novoItem").value;
                 
                 minhasTecnologias.push(valor);
-                // DESAFIO 3: Adicione ao Array
-                // DICA: minhasTecnologias.push(valor);
                 
                 document.getElementById('novoItem').value = '';
-                // DESAFIO 4: Limpe o input e atualize a tela
-                // DICA: document.getElementById("novoItem").value = "";
                 carregarInterface();
             }
             carregarInterface();
